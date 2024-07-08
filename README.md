@@ -6,6 +6,8 @@ J'utilise directement le Model User généré à l'installation comme Administra
 
 Pour récupérer le token d'authentification, il suffit de passer par http://127.0.0.1:8000/ pour créer un compte user, puis un token et le passer en Bearer token dans les requêtes.
 
+Je me suis rendu compte aussi que j'utilise des noms de variable en anglais. J'espère que ça ne posera pas problème.
+
 ### Model Profile
 
 Pour la gestion du chanp image, je réutilise le code du trait HasProfilePhoto de Jetstream qui fait ce dont j'ai besoin.

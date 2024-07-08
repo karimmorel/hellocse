@@ -12,6 +12,11 @@ Alors je reprends le code et modifie le nom du champ sans toucher au reste.
 
 J'utilise un champ integer pour le champ status. Je pense que c'est plus facile à maintenir avec un array dans une constante que directement en dur dans la BDD.
 
+### StoreProfileRequest
+
+Je gère la validation des Profiles dans ce FormRequest. J'en profite pour réutiliser ma constante STATUS_LIST et valider le statut envoyé.
+Dans le controller update(), je permets de n'envoyer qu'une partie des paramètres requis. Je ne sais pas si c'est le comportement voulu, mais ça me semblait logique.
+
 ### Middleware
 
 Vu que les tokens d'authentification permettent d'accorder des droits aux Users, j'ajoute un middleware pour directement trier les droits au niveau du routing. ex : ('can:create')

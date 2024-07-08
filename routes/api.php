@@ -11,6 +11,6 @@ Route::get('/user', function (Request $request) {
 Route::controller(ProfileController::class)->group(function () {
     Route::get('/profiles', 'list');
     Route::post('/profile/create', 'create')->middleware(['auth:sanctum', 'can:create']);
-    Route::put('/profile/{id}', 'update')->middleware(['auth:sanctum', 'can:update']);
-    Route::delete('/profile/{id}', 'delete')->middleware(['auth:sanctum', 'can:delete']);
+    Route::put('/profile/{profile}', 'update')->middleware(['auth:sanctum', 'can:update']);
+    Route::delete('/profile/{profile}', 'delete')->middleware(['auth:sanctum', 'can:delete']);
 });

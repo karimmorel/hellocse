@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProfileRequest;
 use App\Models\Profile;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,11 +30,12 @@ class ProfileController extends Controller
         return response()->json($profile, 201);
     }
 
-    public function update(Request $request, int $id): JsonResponse
+    public function update(Request $request, Profile $profile): JsonResponse
     {
+        // Check rules only for submitted fields
         $rules = array_intersect_key((new StoreProfileRequest())->rules(), $request->all());
         $request->validate($rules);
-        $profile = Profile::findOrFail($id);
+
         $profile->update($request->all());
 
         if ($request->file('image')) {
@@ -43,9 +45,8 @@ class ProfileController extends Controller
         return response()->json($profile);
     }
 
-    public function delete(Request $request, int $id): JsonResponse
+    public function delete(Request $request, Profile $profile): JsonResponse
     {
-        $profile = Profile::findOrFail($id);
         $profile->deleteProfileImage();
         $profile->delete();
 

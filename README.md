@@ -4,6 +4,8 @@ Pour ce test, j'ai décidé d'utiliser une installation de Laravel utiisant Jets
 
 J'utilise directement le Model User généré à l'installation comme Administrateur pour le reste du test.
 
+Pour récupérer le token d'authentification, il suffit de passer par http://127.0.0.1:8000/ pour créer un compte user, puis un token et le passer en Bearer token dans les requêtes.
+
 ### Model Profile
 
 Pour la gestion du chanp image, je réutilise le code du trait HasProfilePhoto de Jetstream qui fait ce dont j'ai besoin.
@@ -24,3 +26,8 @@ Vu que les tokens d'authentification permettent d'accorder des droits aux Users,
 ### Commentaires
 
 Généralement, je préfère utiliser des noms de méthode et de variable clair pour éviter de commenter et faire doublon. Dans certain cas, ça peut rendre les noms plus long que nécessaire, mais je préfère comme ça.
+
+
+### Seeder & Factory
+
+J'utilise directement la class Factory dans le Seeder. 

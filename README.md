@@ -10,7 +10,7 @@ Je me suis rendu compte aussi que j'utilise des noms de variable en anglais. J'e
 
 ### Model Profile
 
-Pour la gestion du chanp image, je réutilise le code du trait HasProfilePhoto de Jetstream qui fait ce dont j'ai besoin.
+Pour la gestion du champ image, je réutilise le code du trait HasProfilePhoto de Jetstream qui fait ce dont j'ai besoin.
 Le nom du champ étant noté en dur dans leur code, je ne peux pas simplement utiliser leur trait si je veux que mon champ s'appelle 'image' dans mon model.
 Alors je reprends le code et modifie le nom du champ sans toucher au reste.
 

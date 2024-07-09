@@ -33,3 +33,8 @@ Généralement, je préfère utiliser des noms de méthode et de variable clair 
 ### Seeder & Factory
 
 J'utilise directement la class Factory dans le Seeder. 
+
+
+### Tests
+
+J'ai déployé des tests pour la class StoreProfileRequest. J'ai voulu rester simple et ne pas tout tester, et ça me semble être une partie du code importante à garder à  l'oeil pour s'assurer de la validité des données pour les Profiles.

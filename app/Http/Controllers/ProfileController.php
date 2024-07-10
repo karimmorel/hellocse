@@ -25,7 +25,7 @@ class ProfileController extends Controller
     {
         $request->validate($request->rules());
         $profile = Profile::create($request->validated());
-        $profile->updateProfileImage($request->file('image'));
+        $profile->updateImage($request->file('image'));
 
         return response()->json($profile, 201);
     }
@@ -39,7 +39,7 @@ class ProfileController extends Controller
         $profile->update($request->all());
 
         if ($request->file('image')) {
-            $profile->updateProfileImage($request->file('image'));
+            $profile->updateImage($request->file('image'));
         }
 
         return response()->json($profile);
@@ -47,7 +47,7 @@ class ProfileController extends Controller
 
     public function delete(Request $request, Profile $profile): JsonResponse
     {
-        $profile->deleteProfileImage();
+        $profile->deleteImage();
         $profile->delete();
 
         return response()->json(null, 204);

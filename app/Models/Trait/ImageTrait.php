@@ -8,7 +8,7 @@ use Laravel\Jetstream\Features;
 
 trait ImageTrait
 {
-    public function updateImage(UploadedFile $photo, $storagePath = 'profile-photos', $fieldName = 'image'): void
+    public function updateImage(UploadedFile $photo, $storagePath = 'image', $fieldName = 'image'): void
     {
         tap($this->{$fieldName}, function ($previous) use ($photo, $storagePath, $fieldName) {
             $this->forceFill([

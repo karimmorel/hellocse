@@ -22,8 +22,8 @@ class ProfileFactory extends Factory
             'last_name' => fake()->name(),
             'status' => Profile::STATUS_LIST[array_rand(Profile::STATUS_LIST)],
             'image' => fake()->imageUrl(),
-            'created_at' => fake()->date(),
-            'updated_at' => fake()->date(),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

@@ -8,6 +8,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+// ProfileController routes
 Route::controller(ProfileController::class)->group(function () {
     Route::get('/profiles', 'list');
     Route::post('/profile/create', 'create')->middleware(['auth:sanctum', 'can:create']);

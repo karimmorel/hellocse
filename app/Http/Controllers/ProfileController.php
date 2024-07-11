@@ -9,6 +9,9 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * CRUD controller for Profiles
+ */
 class ProfileController extends Controller
 {
     public function list(Request $request): JsonResponse

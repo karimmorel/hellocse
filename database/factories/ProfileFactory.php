@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class ProfileFactory extends Factory
 {
     /**
-     * Define the model's default state.
+     * Define the profile's default state.
      *
      * @return array<string, mixed>
      */

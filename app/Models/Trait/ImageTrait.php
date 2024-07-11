@@ -6,6 +6,9 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Laravel\Jetstream\Features;
 
+/**
+ * Generic trait for handling images.
+ */
 trait ImageTrait
 {
     public function updateImage(UploadedFile $photo, $storagePath = 'image', $fieldName = 'image'): void

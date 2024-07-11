@@ -1,6 +1,6 @@
 ## Test technique
 
-Pour ce test, j'ai décidé d'utiliser une installation de Laravel utiisant Jetstream. Suivant la <a href="https://laravel.com/docs/11.x/authentication#laravels-api-authentication-services" target="_blank">documentation</a>, je pense que Sanctum est une bonne solution pour m'aider dans ce test et pour pouvoir gérer les tokens d'authentification simplement.
+Pour ce test, j'ai décidé d'utiliser une installation de Laravel utilisant Jetstream. Suivant la <a href="https://laravel.com/docs/11.x/authentication#laravels-api-authentication-services" target="_blank">documentation</a>, je pense que Sanctum est une bonne solution pour m'aider dans ce test et pour pouvoir gérer les tokens d'authentification simplement.
 
 J'utilise directement le Model User généré à l'installation comme Administrateur pour le reste du test.
 
@@ -12,7 +12,7 @@ Je me suis rendu compte aussi que j'utilise des noms de variable en anglais. J'e
 
 Pour la gestion du champ image, je réutilise le code du trait HasProfilePhoto de Jetstream qui fait ce dont j'ai besoin.
 Le nom du champ étant noté en dur dans leur code, je ne peux pas simplement utiliser leur trait si je veux que mon champ s'appelle 'image' dans mon model.
-Alors je reprends le code et modifie légèrement dans un trait dédié.
+Alors je reprends le code et le modifie légèrement dans un trait dédié.
 
 J'utilise un champ integer pour le champ status. Je pense que c'est plus facile à maintenir avec un array dans une constante que directement en dur dans la BDD.
 
@@ -37,4 +37,4 @@ J'utilise directement la class Factory dans le Seeder.
 
 ### Tests
 
-J'ai déployé des tests pour la class StoreProfileRequest. J'ai voulu rester simple et ne pas tout tester, et ça me semble être une partie du code importante à garder à  l'oeil pour s'assurer de la validité des données pour les Profiles.
+J'ai déployé des tests pour la class StoreProfileRequest. J'ai voulu rester simple et ne pas tout tester. Ça me semble être une partie du code importante à garder à  l'oeil pour s'assurer de la validité des données pour les Profiles.
